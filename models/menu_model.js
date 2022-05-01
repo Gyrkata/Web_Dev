@@ -16,22 +16,25 @@ class Menu {
 
     init() {
         this.db.insert({
+            id:1,
             name: "Shopska Salata",
             description: "Salata koqto e shopska",
             ingredients: "Krastavica, Mlqko",
             allergies: "nqma alergii",
-            price: "12,99 $"
-            
+            price: "12,99 $",
+            _id: "LwugiCuxD3IGdtYY"
         });
         
         console.log("db entry Shopska Salata inserted");
 
         this.db.insert({
+            id:2,
             name: "Kiufte",
-            description: "Mesen delikates",
-            ingredients: "Meso i chubrica",
-            allergies: "Ne go qj brat",
+            description: 'Mesen delikates',
+            ingredients: 'Meso i chubrica',
+            allergies: 'Ne go qj brat',
             price: "200,00 $",
+            _id: "oNf8Y7F5gJlvlGZN"
         })
         
         console.log('db entry Kiufte inserted');
