@@ -8,7 +8,7 @@ app.use(express.static(public));
 
 app.use(express.urlencoded({extended: false}));
 
-const router = require('./controllers/restaurant_menu');
+const router = require('./routes/restaurant_menu');
 app.use('/', router);
 
 app.listen(3000, () => {
