@@ -3,10 +3,9 @@ const app = express();
 
 
 const path = require('path');
-const public = path.join(_dirname,'public');
+const public = path.join(__dirname,'public');
 app.use(express.static(public));
 
-app.use(express.urlencoded({extended: false}));
 
 const router = require('./routes/restaurant_menu');
 app.use('/', router);

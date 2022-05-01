@@ -42,6 +42,6 @@ class Menu {
 
 }
 
-module.exports = GuestBook;
+module.exports = Menu;
 
 
