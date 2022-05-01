@@ -1,6 +1,7 @@
 const nedb = require('nedb');
 
 
+
 class Menu {
 
     constructor(dbFilePath) {
@@ -23,7 +24,7 @@ class Menu {
             
         });
         
-        console.log('db entry Shopska Salata inserted');
+        console.log("db entry Shopska Salata inserted");
 
         this.db.insert({
             name: "Kiufte",
@@ -38,7 +39,24 @@ class Menu {
 
 
     }
-
+    
+    getAllEntries() {
+        
+        return new Promise((resolve, reject) => {
+    
+            this.db.find({}, function(err, entries) {
+                
+                if (err) {
+                    reject(err);
+                
+                } else {
+                    resolve(entries);
+                   
+                    console.log('function all() returns: ', entries);
+                }
+            })
+        })
+    }
 
 }
 
