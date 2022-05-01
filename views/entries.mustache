@@ -1,0 +1,38 @@
+<html>
+<head>
+    {{>header}}
+</head>
+<body>
+     <h1>{{title}}</h1>
+      {{#entries}}
+    <div >
+       <div>
+            <h4> {{name}} </h4>
+             <p>
+                {{description}}
+            </p>
+
+        <div>
+             <p> Contains {{ingredients}}, allergy advice {{allergies}} </p>
+        </div>
+        
+        <div>
+             <p> Price: {{price}} </p>        
+        </div>
+        <hr>
+        {{/entries}}
+        {{^entries}}
+     </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
