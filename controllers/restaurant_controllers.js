@@ -1,6 +1,6 @@
 const res = require("express/lib/response");
 
-exports.entries_list = function(req, res) {
+exports.menu_list = function(req, res) {
     res.send('<h1>Restaurant menu <p> Not yet added </p></h1>');
 }
 

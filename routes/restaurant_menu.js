@@ -5,15 +5,12 @@ const controller = require('../controllers/restaurant_controllers');
 
 
 
+router.get("/", controller.homepage);
 
-router.get("/", function(req, res) {
-  res.send('Welcome to Restaurant Lapicheto');
+router.get("/menu", controller.menu_list);
 
-})
+router.get("/add_dish", controller.new_dish);
 
-router.get('/guestbook', function(req, res){
-res.send('<h1>Have a look at our menu!</h1>')
-})
 
 router.get('/about', function(req, res) {
     res.redirect('/about.html');
