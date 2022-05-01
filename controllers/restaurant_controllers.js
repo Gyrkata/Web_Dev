@@ -10,7 +10,15 @@ exports.menu_list = function(req, res) {
 }
 
 exports.homepage = function(req, res)  {
-    res.send('<h1> Welcome to Restaurant Lapicheto.</h1>');
+    db.getAllEntries()
+       .then((list) => {
+           res.render("entries", {
+               'title': 'Welcome to Restaurant Lapicheto',
+               'entries': list
+     
+
+        })
+    })
 }
 
 exports.new_dish = function(req, res) {
