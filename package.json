@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Gyrkata/Web_Dev/issues"
   },
-  "homepage": "https://github.com/Gyrkata/Web_Dev#readme"
+  "homepage": "https://github.com/Gyrkata/Web_Dev#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
