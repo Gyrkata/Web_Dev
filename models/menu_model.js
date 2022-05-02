@@ -1,4 +1,5 @@
 const nedb = require('nedb');
+const { all } = require('../routes/restaurant_menu');
 
 
 
@@ -60,6 +61,25 @@ class Menu {
             })
         })
     }
+    
+    addDish(name, description, ingredients, allergies, price) {
+        var dish = {
+                name: name,
+                description: description,
+                ingredients: ingredients,
+                allergies: allergies,
+                price: price,
+              
+                }
+        console.log('dish created', dish);
+        this.db.insert(dish, function(err, doc) {
+                if (err) {
+                    console.log('Error inserting dish', description);
+                    } else {
+                    console.log('dish added into the database', doc);
+                }
+        }) 
+     }
 
 }
 
