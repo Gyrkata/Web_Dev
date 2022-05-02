@@ -2,6 +2,9 @@ const express = require('express');
 const mustache = require('mustache-express');
 const app = express();
 
+
+app.use(express.urlencoded({extended: false }));
+
 app.engine('mustache', mustache());
 app.set('view engine', 'mustache');
 

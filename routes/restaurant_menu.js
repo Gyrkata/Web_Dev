@@ -3,14 +3,12 @@ const router = express.Router();
 const controller = require('../controllers/restaurant_controllers.js');
 
 
+router.get('/', controller.homepage);
 
+router.get('/menu', controller.menu_list);
 
-router.get("/", controller.homepage);
-
-router.get("/menu", controller.menu_list);
-
-router.get("/add_dish", controller.new_dish);
-
+router.get('/add_dish', controller.new_dish);
+router.post('/add_dish', controller.post_new_dish);
 
 router.get('/about', function(req, res) {
     res.redirect('/about.html');
